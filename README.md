@@ -31,6 +31,9 @@
 > se va a usar por medio de la clase HttpConnection y crear la logica del servicio que se va a utilizar en la capa de Services
 > de la aplicación. Cabe aclarar que si desea que el servicio tambien use un sistema de caché debe implementarlo en la capa de caché de 
 > la aplicación del mismo modo que se hizo con la capa de Services
+>
+> Del mismo modo que se implemento la capa logica, tambien se debe implementar la funcionalidad que se desee en la capa del FrontEnd conectando
+> la logica anteriormente creada con la interfaz de usuario.
 
 Con el objetivo de preparar el examen final del segundo tercio, por favor siga las siguientes instrucciones.
 
