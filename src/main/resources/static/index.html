@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AplicaciónClima</title>
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet"
+          href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet"/>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.2/moment.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet"/>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.2/moment.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1S2jTuGvQgOAgT-o5mSGOMI53gLnZXRg&callback=initMap"
+            type="text/javascript"></script>
+
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/apiclient.js"></script>
+    <style type="text/css">
+        #map {
+            height: 500px;
+            width: 50%;
+        }
+    </style>
+    <script>
+        function initMap() {
+            const uluru = {lat: 4.61, lng: -74.08};
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 7,
+                center: uluru,
+            });
+            //The marker, positioned at Uluru
+            const marker = new google.maps.Marker({
+                position: uluru,
+                map: map,
+            });
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+<br>
+<br>
+<div class="container" style="text-align: center;background-color:#9bbfc4">
+    <p class="h1">OpenWeather</p>
+    <br>
+
+
+</div>
+<br>
+<br>
+<div class="container" style="text-align: center">
+    <div class="row">
+        <div class="col-lg-6" style="text-align:center;margin-top: 50px">
+            <br>
+            <input type="text" class="form-control" id="nombre" placeholder="Cinema"/>
+            <span class="input-group-btn" style="text-align: center">
+                <button type="button" class="btn btn-success")>Get Functions</button>
+            </span>
+
+            <br>
+            <br>
+            <table id="t01" class="table">
+                <tr style="background-color: #9bbfc4">
+                    <th>Nombre</th>
+                    <th>Pais</th>
+                    <th>Velocidad del viento</th>
+                    <th>Temperatura Minima</th>
+                    <th>Temperatura Maxima</th>
+                    <th>Clima</th>
+                </tr>
+            </table>
+        </div>
+        <div class="col-lg-15"style="margin-top: 50px;text-align: center">
+            <div id="map"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
