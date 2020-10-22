@@ -1,6 +1,5 @@
 package edu.eci.parcialT2.controller;
-
-import edu.eci.parcialT2.service.HttpConnectionService;
+import edu.eci.parcialT2.service.WeatherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
@@ -15,14 +14,14 @@ import org.springframework.web.bind.annotation.RestController;
 public class WeatherController {
 
     @Autowired
-    @Qualifier("HttpConnectionServiceImpl")
-    HttpConnectionService ht;
+    @Qualifier("WeatherServiceImpl")
+    WeatherService ws;
 
     @RequestMapping(path = "/{name}", method = RequestMethod.GET)
     public ResponseEntity<?> getWeatherByName(@PathVariable(name = "name") String nombre) {
         try {
 
-            return new ResponseEntity<>(ht.weatherByCity(nombre), HttpStatus.ACCEPTED);
+            return new ResponseEntity<>(ws.getWeatherByCity(nombre), HttpStatus.ACCEPTED);
 
         } catch (Exception ex) {
             return new ResponseEntity<>("400 bad request", HttpStatus.NOT_FOUND);
