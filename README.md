@@ -5,6 +5,33 @@
 >
 [](https://dashboard.heroku.com/apps) [![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://villamil-arsw-t2.herokuapp.com/)
 
+> Los diagramas de la arquitectura se encuentran en el archivo [Diagramas.asta](https://github.com/cvillamiljr/VILLAMIL-ARWS-T2/blob/master/Diagramas.asta)
+>y las imagenes se presentan a continuación:
+>
+>   - Diagrama de Despliegue
+>
+>   ![](img/DiagramaDespliegue.png)
+>
+>   - Diagrama de Componentes
+>
+>   ![](img/DiagramaComponentes.png)
+>
+> Para ejecutar el programa localmente debes clonar el repositorio en tu maquina de la siguiente forma:
+> ``` git clone https://github.com/cvillamiljr/VILLAMIL-ARWS-T2.git ```
+>
+> Posteriormente debes empaquetar el proyecto usando maven que es la herrameinta que usamos para la gestion del ciclo de vida de nuestra aplicación.
+>
+>``` mvn clean package```
+>
+> Y finalmente ejecutar la aplicación usando Spring que es el framework que utilizamos para realizar la aplicación web.
+>
+> ``` mvn spring-boot:run ```
+>
+> Para implementar una función especifica usando un provedor diferente basta con proveer a la aplicación el servicio que
+> se va a usar por medio de la clase HttpConnection y crear la logica del servicio que se va a utilizar en la capa de Services
+> de la aplicación. Cabe aclarar que si desea que el servicio tambien use un sistema de caché debe implementarlo en la capa de caché de 
+> la aplicación del mismo modo que se hizo con la capa de Services
+
 Con el objetivo de preparar el examen final del segundo tercio, por favor siga las siguientes instrucciones.
 
 1. Explore el API de OpenWeather en el siguiente [enlace](https://openweathermap.org/ ).
