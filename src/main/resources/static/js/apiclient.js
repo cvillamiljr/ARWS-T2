@@ -1,4 +1,4 @@
-const apiUrl = "http://localhost:8080/weatherfinder/"
+const apiUrl = "https://villamil-arsw-t2.herokuapp.com/weatherfinder/"
 apiclient = (function () {
 
     return {
